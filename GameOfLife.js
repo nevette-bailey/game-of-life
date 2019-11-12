@@ -12,8 +12,39 @@ class GameOfLife {
   makeBoard() {
     // Creates and returns a 2D Array
     // with `this.height` as rows and `this.width` as columns
-    
-    return Array(this.height).fill(Array(this.width).fill(0))
+
+    return Array(this.height).fill(Array(this.width).fill(0));
+  }
+
+  /**
+   * Returns the cell value for a given row, col
+   */
+
+  getCell(row, col) {
+    if (this.board[row][col] !== undefined) return this.board[row][col];
+    else return 0;
+  }
+
+  /**
+   * Sets a new value for a cell in the given coordinates
+   */
+
+  setCell(value, row, col) {
+    if (this.board[row][col] !== undefined) {
+      this.board[row][col] = value;
+    }
+  }
+
+  /**
+   * Toggle cell value
+   */
+
+  toggleCell(row, col) {
+    if (this.board[row][col] !== undefined) {
+      this.board[row][col]
+        ? (this.board[row][col] = 0)
+        : (this.board[row][col] = 1);
+    }
   }
 
   /**
