@@ -53,6 +53,18 @@ class GameOfLife {
 
   livingNeighbors(row, col) {
     // TODO: Return the count of living neighbors.
+    let numLivingNeighbors = 0;
+    for (let i = row - 1; i <= row + 1; i++) {
+      for (let j = col - 1; j <= col + 1; j++) {
+        if (!this.board[i][j] || (i === row && j === col)) {
+          continue;
+        } else {
+          numLivingNeighbors++;
+        }
+      }
+    }
+
+    return numLivingNeighbors;
   }
 
   /**
