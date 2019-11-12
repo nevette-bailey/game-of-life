@@ -10,25 +10,10 @@ class GameOfLife {
    */
 
   makeBoard() {
-    // TODO: Create and return an 2D Array
-    // with `this.height` as rows and `this.width` as cols.
-    // For example, given a height of 4 and a width of 3, it will generate:
-    // [
-    //  [0, 0, 0],
-    //  [0, 0, 0],
-    //  [0, 0, 0],
-    //  [0, 0, 0],
-    // ]
-    let multiDimArr = [];
-    for (let i = 0; i < this.height; i++) {
-      let thisRow = Array(this.width).fill(0)
-      // thisRow.map((elem) => {
-      //   elem = 0
-      //   return elem
-      // });
-      multiDimArr.push(thisRow);
-    }
-    return multiDimArr
+    // Creates and returns a 2D Array
+    // with `this.height` as rows and `this.width` as columns
+    
+    return Array(this.height).fill(Array(this.width).fill(0))
   }
 
   /**
